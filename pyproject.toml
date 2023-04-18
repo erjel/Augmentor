@@ -6,10 +6,10 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8,<3.10"
 Cython = "^0.29.34"
 matplotlib = "^3.6.2"
-scikit-image = "^0.18.3"
+scikit-image = "^0.19.3"
 
 
 [build-system]
