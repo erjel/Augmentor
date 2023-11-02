@@ -9,3 +9,4 @@ _warping.c
 test/.ipynb_checkpoints/
 */**/*.h5
 */**/*.gif
+*.so

@@ -1,17 +1,27 @@
 [tool.poetry]
 name = "augmentor"
-version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+version = "0.0.1"
+description = "Data augmentatuib for 3D deep learning"
+authors = ["Lisuk Lee <kisuklee@mit.edu>"]
+url = "https://github.com/seung-lab/Augmentor"
 readme = "README.md"
+# Modified from https://github.com/mdgoldberg/poetry-cython-example
+packages = [{ include = "augmentor/warping" }]
+include = [{ path = "augmentor/warping/**/*.so", format = "wheel" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.10"
 Cython = "^0.29.34"
 matplotlib = "^3.6.2"
 scikit-image = "^0.19.3"
+imgaug = "^0.4.0"
 
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.0.0a9", "Cython~=0.29.6"]
 build-backend = "poetry.core.masonry.api"
+
+# From https://github.com/mdgoldberg/poetry-cython-example
+[tool.poetry.build]
+generate-setup-file = false
+script = "build.py"
