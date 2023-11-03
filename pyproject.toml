@@ -15,6 +15,10 @@ scikit-image = "^0.19.3"
 imgaug = "^0.4.0"
 
 
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+dataprovider3 = {git = "https://github.com/mpinb/DataProvider3", rev = "77da98d5b052e18a798b14d16dcb2b015b3a9300"}
+
 [build-system]
 requires = ["poetry-core>=1.0.0a9", "Cython~=0.29.6"]
 build-backend = "poetry.core.masonry.api"

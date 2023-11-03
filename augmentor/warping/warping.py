@@ -123,7 +123,7 @@ def getCornerIx(sh):
 
     def getGrayCode(n, n_dim):
         if n == 0:
-            return np.zeros(n_dim, dtype=np.int)
+            return np.zeros(n_dim, dtype=int)
         return np.array([(n // 2**i) % 2 for i in range(max(n_dim, int(np.ceil(np.log2(n)))))])
 
     sh = np.array(sh) - 1  ###TODO
@@ -187,7 +187,7 @@ def _warpCorners3d(sh, corners, rot=0, shear=0, scale=(1, 1, 1), stretch=(0, 0, 
     scale = np.array(scale)
     scale = 1.0 / scale
     stretch = np.array(stretch)
-    corners = corners.astype(np.float).copy()
+    corners = corners.astype(float).copy()
 
     z_center_off = float(sh[0]) / 2 - 0.5
     x_center_off = float(sh[1]) / 2 - 0.5
@@ -233,7 +233,7 @@ def getRequiredPatchSize(patch_size, rot, shear, scale, stretch, twist=None):
     total_exc = np.maximum(left_exc, right_exc)  # how much image must be added centrally
     req_size = patch_size + 2 * total_exc
 
-    return req_size.astype(np.int), eff_size.astype(np.int), left_exc.astype(np.int)
+    return req_size.astype(int), eff_size.astype(int), left_exc.astype(int)
 
 
 def getWarpParams(patch_size, amount=1.0, do_twist=True, **kwargs):
