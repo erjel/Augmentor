@@ -3,15 +3,13 @@ name = "augmentor"
 version = "0.0.1"
 description = "Data augmentatuib for 3D deep learning"
 authors = ["Lisuk Lee <kisuklee@mit.edu>"]
-url = "https://github.com/seung-lab/Augmentor"
 readme = "README.md"
 # Modified from https://github.com/mdgoldberg/poetry-cython-example
-packages = [{ include = "augmentor/warping" }]
+packages = [{ include = "augmentor/" }]
 include = [{ path = "augmentor/warping/**/*.so", format = "wheel" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.10"
-Cython = "^0.29.34"
 matplotlib = "^3.6.2"
 scikit-image = "^0.19.3"
 imgaug = "^0.4.0"
