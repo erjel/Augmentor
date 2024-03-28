@@ -11,7 +11,7 @@ include = [{ path = "augmentor/warping/**/*.so", format = "wheel" }]
 [tool.poetry.dependencies]
 python = ">=3.8,<3.10"
 matplotlib = "^3.6.2"
-scikit-image = "^0.19.3"
+scikit-image = "^0.21.0"
 imgaug = "^0.4.0"
 
 
