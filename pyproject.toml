@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "augmentor"
-version = "0.0.1"
+version = "0.0.2"
 description = "Data augmentatuib for 3D deep learning"
 authors = ["Lisuk Lee <kisuklee@mit.edu>"]
 readme = "README.md"
@@ -9,7 +9,7 @@ packages = [{ include = "augmentor/" }]
 include = [{ path = "augmentor/warping/**/*.so", format = "wheel" }]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.10"
+python = ">=3.9,<4"
 matplotlib = "^3.6.2"
 scikit-image = "^0.21.0"
 imgaug = "^0.4.0"
